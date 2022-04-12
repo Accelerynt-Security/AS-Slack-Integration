@@ -4,14 +4,8 @@ Author: Accelerynt
 
 For any technical questions, please contact info@accelerynt.com  
 
-
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAccelerynt-Security%2FAS-Slack-Integration%2Fmain%2Fazuredeploy.json" target="_blank">
-    <img src="https://aka.ms/deploytoazurebutton"/>
-</a>
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAccelerynt-Security%2FAS-Slack-Integration%2Fmain%2Fazuredeploy.json" target="_blank">
-<img src="https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazuregov.png"/>
-</a>
-
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FAzure-Sentinel%2Fmaster%2FPlaybooks%2FAS-Slack-Integration%2Fazuredeploy.json)
+[![Deploy to Azure Gov](https://aka.ms/deploytoazuregovbutton)](https://portal.azure.us/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FAzure-Sentinel%2Fmaster%2FPlaybooks%2FAS-Slack-Integration%2Fazuredeploy.json)    
 
 This playbook is intended to be run from a Microsoft Sentinel incident. It will create a Slack post with the related Microsoft Sentinel incident information including parsed entity information.
 
@@ -33,13 +27,13 @@ For this playbook, you will need to create a Slack Bot app to securely post to y
 
 To create a Slack App and obtain a Bot Token:
                                                                                                                                      
-From your Slack Workspace, navigate to https://api.slack.com/apps/ and click the "**Create a new Slack app**" button.
+From your Slack Workspace, navigate to https://api.slack.com/apps/ and click the "**Create a new Slack app**" button and select the "**From Scratch**" option.
 
 ![Slack_App_1](Images/Slack_App_1.png)
 
 
-Enter in "**Microsoft Sentinel**" for the app name then add a description. 
-Finally, select a workspace and click "**Create App**" .
+Enter in "**Microsoft Sentinel**" for the app name and then select a workspace.  
+Finally, click "**Create App**" .
 
 ![Slack_App_2](Images/Slack_App_2.png)
 
@@ -66,7 +60,7 @@ Click "**Allow**" and then copy the entire value in the "**Bot User OAuth Token*
 ![Slack_App_6](Images/Slack_App_6.png)
 
 
-If you would like, you can also add the Microsoft Sentinel Logo under "**Display Information**".
+If you would like, you can also add the Microsoft Sentinel Logo under "**Display Information**". This section is located under the "**Basic Information**" menu option.
 
 ![Slack_App_7](Images/Slack_App_7.png)
 
@@ -92,19 +86,15 @@ https://app.slack.com/client/{workspace-id}/{**channel-id**}}
 ### Deployment   
 
 To configure and deploy this playbook:
- 
+
 Open your browser and ensure you are logged into your Microsoft Sentinel workspace. In a separate tab, open the link to our playbook on the Accelerynt Security GitHub Repository:
 
 https://github.com/Accelerynt-Security/AS-Slack-Integration
 
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAccelerynt-Security%2FAS-Slack-Integration%2Fmain%2Fazuredeploy.json" target="_blank">
-    <img src="https://aka.ms/deploytoazurebutton""/>
-</a>
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAccelerynt-Security%2FAS-Slack-Integrationn%2Fmain%2Fazuredeploy.json" target="_blank">
-<img src="https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazuregov.png"/>
-</a>                                                 
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FAzure-Sentinel%2Fmaster%2FPlaybooks%2FAS-Slack-Integration%2Fazuredeploy.json)
+[![Deploy to Azure Gov](https://aka.ms/deploytoazuregovbutton)](https://portal.azure.us/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FAzure-Sentinel%2Fmaster%2FPlaybooks%2FAS-Slack-Integration%2Fazuredeploy.json)                                                    
 
-From there, click the “**Deploy to Azure**” button at the bottom and it will bring you to the custom deployment template.
+Click the “**Deploy to Azure**” button at the bottom and it will bring you to the custom deployment template.
 
 In the **Project Details** section:
 
@@ -115,6 +105,8 @@ In the **Instance Details** section:
 * **Playbook Name**: This can be left as “AS-Slack-Integration” or you may change it.  
 
 * **OAuth Token**: Enter the value of the Slack OAuth Token created from the first section.
+
+* **Channel Id**: Enter the value of the Slack channel id noted from the first section.
 
 Towards the bottom, click on “**Review + create**”. 
 
