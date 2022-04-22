@@ -11,11 +11,9 @@
             "type": "String"
         },
         "OAuthToken": {
-            "defaultValue": "",
             "type": "SecureString"
         },
         "ChannelId": {
-            "defaultValue": "Enter your Slack Channel Id",
             "type": "String"
         }
     },
